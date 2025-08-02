@@ -102,8 +102,8 @@ const Projects = () => {
           {featuredProjects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
               {/* Project Header */}
               <div className="flex items-start justify-between mb-4">

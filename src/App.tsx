@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
@@ -7,12 +7,32 @@ import Education from './components/Education';
 import Footer from './components/Footer';
 
 function App() {
+  useEffect(() => {
+    // Performance optimization: Preload critical resources
+    const preloadImages = () => {
+      const imageUrls = [
+        '/profile-image.jpg',
+        // Add other critical images here
+      ];
+      
+      imageUrls.forEach(url => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = url;
+        document.head.appendChild(link);
+      });
+    };
+
+    preloadImages();
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Hero />
-      <Projects />
       <Resume />
       <Recommendations />
+      <Projects />
       <Education />
       <Footer />
     </div>

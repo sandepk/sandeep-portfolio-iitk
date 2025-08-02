@@ -32,9 +32,9 @@ const Resume = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
           {/* Resume Preview Card */}
-          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-500">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-500 flex flex-col h-full">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-xl flex items-center justify-center shadow-lg">
                 <FileText className="w-6 h-6 text-primary-600" />
@@ -46,7 +46,7 @@ const Resume = () => {
             </div>
 
             {/* Resume Summary */}
-            <div className="space-y-4">
+            <div className="space-y-4 flex-1">
               {/* Professional Summary */}
               <div>
                 <h4 className="text-base font-semibold text-gray-800 mb-2">Professional Summary</h4>
@@ -104,7 +104,7 @@ const Resume = () => {
           </div>
 
           {/* Download Options */}
-          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-500">
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-500 flex flex-col h-full">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-success-100 to-accent-100 rounded-xl flex items-center justify-center shadow-lg">
                 <Download className="w-6 h-6 text-success-600" />
@@ -116,7 +116,7 @@ const Resume = () => {
             </div>
 
             {/* Format Selection */}
-            <div className="mb-6">
+            <div className="mb-6 flex-1">
               <label className="block text-sm font-medium text-gray-700 mb-3">
                 Select Format
               </label>

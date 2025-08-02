@@ -1,5 +1,5 @@
 import React from 'react';
-import { Quote, Star, Linkedin, User } from 'lucide-react';
+import { Quote, Star, Linkedin } from 'lucide-react';
 
 const Recommendations = () => {
   const recommendations = [
@@ -9,8 +9,7 @@ const Recommendations = () => {
       title: 'Senior Principal Engineer',
       company: 'Apollo 24|7',
       content: 'Sandeep was an essential part of the Apollo Insurance frontend development, driving key features and ensuring high-quality, maintainable code using React.js and Next.js. His dedication and ability to deliver under tight deadlines were critical to the successful launch of the project within six months. Sandeep consistently showed strong ownership, technical expertise, and a proactive approach that made a real difference to the team\'s success. I highly recommend him for any frontend engineering role.',
-      rating: 5,
-      avatar: null
+      rating: 5
     },
     {
       id: 2,
@@ -18,8 +17,7 @@ const Recommendations = () => {
       title: 'Principal Software Engineer',
       company: 'Apollo 24|7',
       content: 'Sandeep is reliable and detail-oriented, with a clear and structured approach to his work. He balances technical depth with big-picture thinking, consistently improving team output. I would gladly work with him again.',
-      rating: 5,
-      avatar: null
+      rating: 5
     },
     {
       id: 3,
@@ -27,8 +25,7 @@ const Recommendations = () => {
       title: 'Senior Software Engineer',
       company: 'QuinStreet Software Pvt. Ltd.',
       content: 'Sandeep demonstrated exceptional technical skills and leadership during our collaboration. His expertise in React and modern frontend technologies significantly improved our development velocity. He consistently delivered high-quality code and mentored junior developers effectively.',
-      rating: 5,
-      avatar: null
+      rating: 5
     },
     {
       id: 4,
@@ -36,8 +33,7 @@ const Recommendations = () => {
       title: 'Technical Lead',
       company: 'Securiti Sciences Pvt. Ltd.',
       content: 'Sandeep is a highly skilled frontend developer with excellent problem-solving abilities. His attention to detail and commitment to code quality helped us maintain high standards. He consistently delivered features on time and was always willing to help team members.',
-      rating: 5,
-      avatar: null
+      rating: 5
     }
   ];
 
@@ -70,8 +66,8 @@ const Recommendations = () => {
           {recommendations.slice(1, 4).map((recommendation, index) => (
             <div
               key={recommendation.id}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
               {/* Quote Icon and Stars */}
               <div className="flex justify-between items-start mb-4">
@@ -92,18 +88,7 @@ const Recommendations = () => {
 
               {/* Author Info */}
               <div className="border-t border-gray-100 pt-4 mt-auto">
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center shadow-md">
-                    {recommendation.avatar ? (
-                      <img
-                        src={recommendation.avatar}
-                        alt={recommendation.name}
-                        className="w-14 h-14 rounded-full object-cover"
-                      />
-                    ) : (
-                      <User className="w-7 h-7 text-gray-500" />
-                    )}
-                  </div>
+                <div className="flex items-center">
                   <div className="flex-1">
                     <h4 className="font-bold text-gray-800 text-base">
                       {recommendation.name}
@@ -123,10 +108,10 @@ const Recommendations = () => {
 
         {/* Rahul Gautam's Recommendation - Centered Below */}
         <div className="flex justify-center mt-12">
-          <div
-            className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full max-w-md"
-            style={{ animationDelay: '0.4s' }}
-          >
+                      <div
+              className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full max-w-md"
+              style={{ animationDelay: '0.2s' }}
+            >
             {/* Quote Icon and Stars */}
             <div className="flex justify-between items-start mb-4">
               <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-xl flex items-center justify-center shadow-lg">
@@ -146,18 +131,7 @@ const Recommendations = () => {
 
             {/* Author Info */}
             <div className="border-t border-gray-100 pt-4 mt-auto">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center shadow-md">
-                  {recommendations[0].avatar ? (
-                    <img
-                      src={recommendations[0].avatar}
-                      alt={recommendations[0].name}
-                      className="w-14 h-14 rounded-full object-cover"
-                    />
-                  ) : (
-                    <User className="w-7 h-7 text-gray-500" />
-                  )}
-                </div>
+              <div className="flex items-center">
                 <div className="flex-1">
                   <h4 className="font-bold text-gray-800 text-base">
                     {recommendations[0].name}

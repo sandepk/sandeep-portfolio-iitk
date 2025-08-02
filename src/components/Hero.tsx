@@ -14,7 +14,7 @@ const Hero = () => {
   ];
 
   const handleGetInTouch = () => {
-    window.location.href = 'mailto:sandeep@example.com';
+    window.location.href = 'mailto:jobforsandeep2025@gmail.com';
   };
 
   const handleLinkedIn = () => {
@@ -40,11 +40,10 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-primary-50 via-secondary-50 to-accent-50 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-400 to-accent-400 rounded-full opacity-20 animate-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-secondary-400 to-warning-400 rounded-full opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-accent-300 to-primary-300 rounded-full opacity-10 animate-pulse-slow"></div>
+      {/* Optimized animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-400 to-accent-400 rounded-full opacity-15 animate-float will-change-transform"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-secondary-400 to-warning-400 rounded-full opacity-15 animate-float will-change-transform" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
@@ -58,7 +57,7 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
                   <img 
-                    src="/profile-image.jpg" 
+                    src="https://media.licdn.com/dms/image/C4D03AQHqQqQqQqQqQq/profile-displayphoto-shrink_800_800/0/1703123456789?e=1721865600&v=beta&t=your-actual-linkedin-image-id"
                     alt="Sandeep K Gupta - Senior Frontend Engineer"
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -80,7 +79,7 @@ const Hero = () => {
               <div className="flex items-center justify-center gap-2 mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
                 <div className="bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium text-lg flex items-center gap-2">
                   <GraduationCap className="w-5 h-5" />
-                  Senior Frontend Engineer (SDE-2)
+                  Senior Software Engineer (SDE-2)
                 </div>
               </div>
               <p className="text-gray-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
