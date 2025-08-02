@@ -4,6 +4,7 @@ import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Recommendations from './components/Recommendations';
 import Education from './components/Education';
+import CanvaProject from './components/CanvaProject';
 import Footer from './components/Footer';
 
 function App() {
@@ -27,16 +28,17 @@ function App() {
     preloadImages();
   }, []);
 
-  return (
-    <div className="min-h-screen">
-      <Hero />
-      <Resume />
-      <Recommendations />
-      <Projects />
-      <Education />
-      <Footer />
-    </div>
-  );
+                return (
+                <div className="min-h-screen">
+                  <Hero />
+                  <Resume />
+                  <Recommendations />
+                  <Projects />
+                  <Education />
+                  <CanvaProject />
+                  <Footer />
+                </div>
+              );
 }
 
 export default App;
